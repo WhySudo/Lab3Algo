@@ -71,3 +71,20 @@ TEST_F(SortingTests, BestSortTest){
     BestSortingTest(bigArrayOrdered, 100, comp);
     BestSortingTest(bigArray, 100, comp);
 }
+
+TEST_F(SortingTests, StringQuickSortTest){
+    std::string array[] = {"abdcddd", "abdcdd","abdcd", "abcd", "ab", "" };
+    auto comp = [](std::string a, std::string b){return a.size() < b.size();};
+    QuickSortingTest(array, 6, comp);
+}
+TEST_F(SortingTests, StringInsertSortTest){
+    std::string array[] = {"abdcddd", "abdcdd","abdcd", "abcd", "ab", "" };
+    auto comp = [](std::string a, std::string b){return a.size() < b.size();};
+    InsertionSortingTest(array, 6, comp);
+}
+TEST_F(SortingTests, StringBestSortTest){
+    std::string array[] = {"abdcddd", "abdcdd","abdcd", "abcd", "ab", "" };
+    auto comp = [](std::string a, std::string b){return a.size() < b.size();};
+    BestSortingTest(array, 6, comp);
+}
+
